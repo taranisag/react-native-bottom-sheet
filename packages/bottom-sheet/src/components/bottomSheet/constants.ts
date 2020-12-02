@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import Animated from 'react-native-reanimated';
+import type Animated from 'react-native-reanimated';
 
 const {
   Easing: EasingV1,

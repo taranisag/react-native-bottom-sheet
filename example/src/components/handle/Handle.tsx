@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
-import { BottomSheetHandleProps } from '@gorhom/bottom-sheet';
+import type { BottomSheetHandleProps } from '@gorhom/bottom-sheet';
 import Animated, { interpolate, Extrapolate } from 'react-native-reanimated';
 import { transformOrigin, toRad } from 'react-native-redash';
 

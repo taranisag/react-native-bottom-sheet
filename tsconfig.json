@@ -2,11 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@gorhom/bottom-sheet": ["./src/index"]
+      "@gorhom/*": ["./packages/*/src"]
     },
+    "composite": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
+    "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["esnext"],
@@ -22,7 +24,5 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  },
-  "exclude": ["example"],
-  "include": ["src"]
+  }
 }

@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import Showcase from '@gorhom/showcase-template';
 import { useNavigation } from '@react-navigation/native';
-import { version, description } from '../../../package.json';
+import { version, description } from '@gorhom/bottom-sheet/package.json';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 const data = [

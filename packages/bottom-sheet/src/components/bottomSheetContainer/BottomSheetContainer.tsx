@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 import isEqual from 'lodash.isequal';
 import invariant from 'invariant';
-import { TapGestureHandler } from 'react-native-gesture-handler';
+import type { TapGestureHandler } from 'react-native-gesture-handler';
 import { useTapGestureHandler } from 'react-native-redash';
 import BottomSheetView from '../bottomSheet';
 import ContentWrapper from '../contentWrapper';

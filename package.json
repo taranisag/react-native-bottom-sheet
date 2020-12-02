@@ -1,76 +1,43 @@
 {
-  "name": "@gorhom/bottom-sheet",
-  "version": "2.0.0-alpha.3",
   "description": "A performant interactive bottom sheet with fully configurable options 🚀",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
-  "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index.ts",
-  "files": [
-    "src",
-    "lib"
-  ],
-  "keywords": [
-    "react-native",
-    "ios",
-    "android",
-    "bottom-sheet",
-    "bottomsheet",
-    "reanimated",
-    "sheet",
-    "modal"
-  ],
-  "repository": "https://github.com/gorhom/react-native-bottom-sheet",
   "author": "Mo Gorhom (https://gorhom.dev)",
   "license": "MIT",
+  "repository": "https://github.com/gorhom/react-native-bottom-sheet",
   "bugs": {
     "url": "https://github.com/gorhom/react-native-bottom-sheet/issues"
   },
   "homepage": "https://github.com/gorhom/react-native-bottom-sheet#readme",
-  "scripts": {
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "build": "bob build && yarn copy-dts",
-    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" lib/typescript",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn install && yarn example"
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "example"
+    ]
   },
-  "dependencies": {
-    "invariant": "^2.2.4",
-    "lodash.isequal": "^4.5.0",
-    "nanoid": "^3.1.12",
-    "react-native-redash": "^14.2.3"
+  "scripts": {
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "typescript": "tsc --noEmit --composite false",
+    "build": "lerna run build",
+    "prerelease": "lerna run clean",
+    "release": "lerna publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@react-native-community/bob": "^0.16.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
-    "@types/invariant": "^2.2.33",
-    "@types/lodash.isequal": "^4.5.5",
-    "@types/react": "^16.9.19",
-    "@types/react-native": "0.61.10",
+    "@types/react": "^17.0.0",
+    "@types/react-native": "0.63.37",
     "auto-changelog": "^2.2.1",
-    "copyfiles": "^2.3.0",
-    "eslint": "^7.10.0",
-    "eslint-config-prettier": "^6.12.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
-    "prettier": "^2.1.2",
-    "react": "~16.9.0",
-    "react-native": "^0.62.2",
-    "react-native-gesture-handler": "^1.7.0",
-    "react-native-reanimated": "^1.12.0",
-    "release-it": "^14.0.3",
-    "typescript": "^3.9.7"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*",
-    "react-native-gesture-handler": ">=1.6.1",
-    "react-native-reanimated": ">=1.8.0"
+    "lerna": "^3.22.1",
+    "prettier": "^2.2.1",
+    "release-it": "^14.2.2",
+    "typescript": "^4.1.2"
   },
   "husky": {
     "hooks": {
