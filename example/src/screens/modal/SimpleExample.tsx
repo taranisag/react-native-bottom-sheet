@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { View, StyleSheet, Alert } from 'react-native';
-import { useBottomSheetModal } from '@gorhom/bottom-sheet';
+import { useBottomSheetModal } from '@gorhom/bottom-sheet-modal';
 import Button from '../../components/button';
 import ContactListContainer from '../../components/contactListContainer';
 import withModalProvider from '../withModalProvider';

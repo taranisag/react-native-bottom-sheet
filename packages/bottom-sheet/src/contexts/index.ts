@@ -3,4 +3,3 @@ export {
   BottomSheetInternalContext,
   BottomSheetInternalProvider,
 } from './internal';
-export { BottomSheetModalContext, BottomSheetModalProvider } from './modal';

@@ -23,9 +23,5 @@ export type { BottomSheetBackgroundProps } from './components/defaultBackground'
 export { default as BottomSheetOverlay } from './components/overlay';
 export type { BottomSheetOverlayProps } from './components/overlay';
 
-// modal provider
-export { default as BottomSheetModalProvider } from './components/bottomSheetModalProvider';
-
 // hooks
 export { useBottomSheet } from './hooks/useBottomSheet';
-export { useBottomSheetModal } from './hooks/useBottomSheetModal';

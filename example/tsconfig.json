@@ -1,6 +1,6 @@
 {
   "extends": "../tsconfig",
-  "references": [{ "path": "../packages/bottom-sheet" }],
+  "references": [{ "path": "../packages/bottom-sheet" }, { "path": "../packages/bottom-sheet-modal" }],
   "compilerOptions": {
     "baseUrl": ".",
   },
