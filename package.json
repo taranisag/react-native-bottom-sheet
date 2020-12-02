@@ -12,6 +12,12 @@
     "packages": [
       "packages/*",
       "example"
+    ],
+    "nohoist": [
+      "**/example",
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-*"
     ]
   },
   "scripts": {

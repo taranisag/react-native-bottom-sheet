@@ -1,6 +1,6 @@
 {
-  "name": "@gorhom/bottom-sheet",
-  "version": "2.0.0-alpha.3",
+  "name": "@gorhom/bottom-sheet-modal",
+  "version": "1.0.0",
   "description": "A performant interactive bottom sheet with fully configurable options 🚀",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -42,7 +42,7 @@
     "invariant": "^2.2.4",
     "lodash.isequal": "^4.5.0",
     "nanoid": "^3.1.12",
-    "react-native-redash": "^14.2.4"
+    "react-native-redash": "^14.2.3"
   },
   "devDependencies": {
     "@types/invariant": "^2.2.33",
