@@ -5,7 +5,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
-      "allowBranch": "master",
+      "allowBranch": "feature/convert-to-monorepo",
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "chore: release",
