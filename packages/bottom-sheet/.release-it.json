@@ -1,0 +1,27 @@
+{
+  "git": {
+    "push": true,
+    "tagName": "v${version}",
+    "commitMessage": "chore(bottom-sheet): release v${version}",
+    "changelog": "auto-changelog --stdout --commit-limit false --ignore-commit-pattern \"^chore: release v\" --unreleased --template ./release-template.hbs --tag-pattern \"^v\\d+\\.\\d+\\.\\d+$\"",
+    "pushArgs": "--follow-tags"
+  },
+  "github": {
+    "release": true,
+    "releaseNotes": "auto-changelog --stdout --commit-limit false --ignore-commit-pattern \"^chore: release v\" --unreleased --template ./release-template.hbs --tag-pattern \"^v\\d+\\.\\d+\\.\\d+$\""
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "release-it-lerna-changelog": {
+      "infile": "CHANGELOG.md"
+    },
+    "@release-it/conventional-changelog": {
+      "preset": "angular"
+    }
+  },
+  "hooks": {
+    "after:bump": "auto-changelog -p --ignore-commit-pattern \"^chore: release v\" --template \"keepachangelog\" --tag-pattern \"^v\\d+\\.\\d+\\.\\d+$\""
+  }
+}
