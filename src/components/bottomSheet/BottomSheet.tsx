@@ -69,6 +69,7 @@ Animated.addWhitelistedUIProps({
 const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
   (
     {
+      preventScroll
       // animations
       animationDuration = DEFAULT_ANIMATION_DURATION,
       animationEasing = DEFAULT_ANIMATION_EASING,
@@ -260,7 +261,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
       } else {
         // @ts-ignore
         rootTapGestureRef.current.setNativeProps({
-          maxDeltaY: snapPoints[currentPositionIndex],
+          maxDeltaY: preventScroll ? -1 : snapPoints[currentPositionIndex],
         });
       }
     }, [snapPoints, flashScrollableIndicators]);
