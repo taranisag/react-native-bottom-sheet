@@ -69,7 +69,7 @@ Animated.addWhitelistedUIProps({
 const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
   (
     {
-      preventScroll
+      preventScroll = false,
       // animations
       animationDuration = DEFAULT_ANIMATION_DURATION,
       animationEasing = DEFAULT_ANIMATION_EASING,

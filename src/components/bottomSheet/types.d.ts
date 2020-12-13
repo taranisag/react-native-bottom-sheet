@@ -4,6 +4,7 @@ import type { BottomSheetHandleProps } from '../handle';
 import type { ViewProps } from 'react-native';
 
 export interface BottomSheetProps extends BottomSheetAnimationConfigs {
+  preventScroll?: boolean
   /**
    * Initial snap index, you also could provide {`-1`} to initiate bottom sheet in closed state.
    * @type number
