@@ -5,6 +5,7 @@ import React, {
   forwardRef,
   Ref,
   memo,
+  useState,
 } from 'react';
 import {
   ScrollView as RNScrollView,
@@ -12,7 +13,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import isEqual from 'lodash.isequal';
-import Animated from 'react-native-reanimated';
+import Animated, { cond, neq, call, useCode } from 'react-native-reanimated';
 import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 import BottomSheetDraggableView from '../bottomSheetDraggableView';
 import { useScrollableInternal, useBottomSheetInternal } from '../../hooks';
@@ -54,6 +55,24 @@ const BottomSheetScrollViewComponent = forwardRef(
     useImperativeHandle(ref, () => scrollableRef.current!.getNode());
     useFocusHook(handleSettingScrollable);
 
+    const [scrollEnabled, setScrollEnabled] = useState(false);
+
+    useCode(() => {
+      return cond(
+        neq(decelerationRate, 0.001),
+        call([], () => {
+          if (!scrollEnabled) {
+            setScrollEnabled(true);
+          }
+        }),
+        call([], () => {
+          if (scrollEnabled) {
+            setScrollEnabled(false);
+          }
+        })
+      );
+    }, [decelerationRate, scrollEnabled]);
+
     return (
       <BottomSheetDraggableView
         nativeGestureRef={nativeGestureRef}
@@ -67,6 +86,7 @@ const BottomSheetScrollViewComponent = forwardRef(
         >
           <AnimatedScrollView
             {...rest}
+            scrollEnabled={scrollEnabled}
             ref={scrollableRef}
             overScrollMode="never"
             bounces={false}
