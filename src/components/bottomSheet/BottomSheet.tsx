@@ -261,7 +261,7 @@ const BottomSheetComponent = forwardRef<BottomSheet, BottomSheetProps>(
       } else {
         // @ts-ignore
         rootTapGestureRef.current.setNativeProps({
-          maxDeltaY: preventScroll ? -1 : snapPoints[currentPositionIndex],
+          maxDeltaY: snapPoints[currentPositionIndex],
         });
       }
     }, [snapPoints, flashScrollableIndicators]);
