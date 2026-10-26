@@ -1,7 +1,7 @@
 {
   "name": "@gorhom/bottom-sheet",
   "version": "2.0.0-alpha.5",
-  "description": "A performant interactive bottom sheet with fully configurable options 🚀",
+  "description": "A performant interactive bottom sheet with fully configurable options \ud83d\ude80",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -74,7 +74,8 @@
     "react-native-reanimated": ">=1.9.0"
   },
   "resolutions": {
-    "shell-quote": "^1.8.1"
+    "shell-quote": "^1.8.1",
+    "hermes-engine": "^0.10.0"
   },
   "husky": {
     "hooks": {
