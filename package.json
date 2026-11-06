@@ -75,7 +75,8 @@
   },
   "resolutions": {
     "shell-quote": "^1.8.1",
-    "release-it/form-data": "3.0.4"
+    "release-it/form-data": "3.0.4",
+    "hermes-engine": "^0.10.0"
   },
   "husky": {
     "hooks": {
